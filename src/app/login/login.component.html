@@ -9,12 +9,12 @@
 			<div class="login__row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login__wrap p-0">
-                        <form action="#" class="signin-form">
+                        <form (ngSubmit)="login()">
                             <div class="login__form-group form-group">
-                                <input type="text" class="form-control login__input" placeholder="Username" required>
+                                <input type="text" [(ngModel)]="username" name="username" class="form-control login__input" placeholder="Username" required>
                             </div>
                             <div class="login__form-group form-group">
-                                <input id="password-field" type="password" class="form-control login__input" placeholder="Password" required>
+                                <input type="password" [(ngModel)]="password" name="password" class="form-control login__input" placeholder="Password" required>
                             </div>
                             <div class="login__form-group form-group">
                                 <button type="submit" class="form-control login__button btn btn-primary submit px-3">Sign In</button>
